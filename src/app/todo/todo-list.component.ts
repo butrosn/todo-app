@@ -126,7 +126,7 @@ import { Filter } from './todo.store';
       <button
         (click)="todoStore.currentPage.set(todoStore.currentPage() - 1)"
         [disabled]="todoStore.currentPage() === 1"
-        class="px-2 py-1 rounded-md bg-gray-200 disabled:opacity-50 disabled:cursor-no-drop hover:cursor-pointer"
+        class="px-2 py-1 rounded-md bg-gray-200 disabled:opacity-50 disabled:cursor-default hover:cursor-pointer"
       >
         Prev
       </button>
@@ -138,7 +138,7 @@ import { Filter } from './todo.store';
         [disabled]="
           todoStore.currentPage() * todoStore.ITEMS_PER_PAGE >= todoStore.filteredTodos().length
         "
-        class="px-2 py-1 rounded-md bg-gray-200 disabled:opacity-50 disabled:cursor-no-drop hover:cursor-pointer"
+        class="px-2 py-1 rounded-md bg-gray-200 disabled:opacity-50 disabled:cursor-default hover:cursor-pointer"
       >
         Next
       </button>
